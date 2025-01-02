@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" href="weather-icon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Content Container -->
+    <div class="container">
+        <h1>Weather App</h1>
+        <form id="weatherForm">
+            <input type="text" id="locationInput" placeholder="Enter a city" aria-label="Enter city">
+            <button id="searchButton" aria-label="Search">Search</button>
+        </form>
+        <div class="weather-info">
+            <h2 id="location"></h2>
+            <p id="temperature"></p>
+            <p id="description"></p>
+            <p id="humidity"></p>
+            <p id="wind"></p>
+            <p id="feels-like"></p>
+            <p id="pressure"></p>
+            <p id="visibility"></p>
+            <p id="sunrise"></p>
+            <p id="sunset"></p>
+            <p id="uv-index"></p>
+        </div>
+        <!-- Loading or Error Messages -->
+        <p id="p1"></p>
+        <div id="loadingSpinner" class="spinner"></div>
+    </div>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-container">
+        <button id="chatbotButton" aria-label="Open Chatbot">
+            <img src="chatbot-icon.png" alt="Chatbot Icon" id="chatbotIcon">
+        </button>
+    </div>
+
+    <!-- Chatbot Icon -->
+    <div id="chatbot-container">
+        <button id="chatbotButton" aria-label="Open Chatbot" onclick="openWeatherBot()">
+            <img src="chatbot-icon.png" alt="Chatbot Icon" id="chatbotIcon">
+        </button>
+    </div>
+
+    <!-- Script to open the weather bot -->
+    <script>
+        function openWeatherBot() {
+            window.open('https://kweatherapp.streamlit.app/', '_blank');
+        }
+    </script>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p id="pMe">&copy; 2024 <a href="https://linktr.ee/Keshabkjha" aria-label="Keshab Kumar's profile"> Keshabkjha </a>All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body> 
+</html>
